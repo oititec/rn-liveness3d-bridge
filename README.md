@@ -6,6 +6,8 @@ Este repositório é responsável pela conexão do NativeModules do React Nactiv
 
 A Bridge no React Native é a camada que permite que os módulos JavaScript e Nativo interajam entre si e é principalmente uma camada transportadora que conduz mensagens de feedback agrupadas cronológicas não paralelas de JavaScript para módulos Nativos.
 
+![alt text](https://github.com/oititec/liveness3d-bridge-rn/blob/master/Documentation/bridge.png?raw=true)
+
 # 3. Uso
 
 ### Liveness 3D Bridge Sumário
@@ -17,21 +19,24 @@ Andorid
 - [Configuração no Android](Documentation/androidCONFIGURATION.md);
 - [Criar Módulo e Pacote (JAVA)](Documentation/moduleandPackageJAVA.md);
 - [Criar Módulo e Pacote (KOTLIN)](Documentation/moduleandPackageKOTLIN.md);
+- [Como fazer a estilização do XML?](Documentation/xmlCUSTOMIZATION.md.md);
 
 iOS:
 
 - [Configuração no iOS](Documentation/iosCONFIGURATION.md);
+- [Criar Módulo e Pacote no iOS](Documentation/moduleandPackageIOS.md);
 
 React Native:
 
-- [Exemplo de Projeto: criação e inicialização](https://github.com/oititec/liveness3d-sample).
+- [Utilizando NativeModules do React](Documentation/reactnativeUSAGE.md).
+  - [Exemplo de Uso](https://github.com/oititec/liveness3d-bridge-rn/Liveness3D)
 
 # 4. Como executar o clone do Repositório?
 
 Execute o clone do repositório abaixo para baixar o código de exemplo:
 
 ```sh
-git clone https://github.com/oititec/liveness3d-rn-bridge
+git clone https://github.com/oititec/liveness3d-bridge-rn
 ```
 
 # 5. Como rodar o Script?

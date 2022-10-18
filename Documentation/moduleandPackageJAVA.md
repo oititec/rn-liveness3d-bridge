@@ -1,6 +1,6 @@
 # 1. Criar Módulo e Pacote JAVA
 
-Após executar essas etapas você deve iniciar a criação do módulo e do pacote incluindo os arquivos [Liveness3dReactNativePackage.kt](https://github.com/oititec/liveness3d-rn-bridge/tree/master/android/app/src/main/java/com/liveness3drnbridge/Liveness3dReactNativePackage.kt) e o [Liveness3dReactNativeModule.kt](https://github.com/oititec/liveness3d-rn-bridge/tree/master/android/app/src/main/java/com/liveness3drnbridge/Liveness3dReactNativeModule.kt) na pasta <mark>android/app/src/main/java/com/your-app-name/</mark>
+Após executar essas etapas você deve iniciar a criação do módulo e do pacote incluindo os arquivos [Liveness3dReactNativePackage.kt](https://github.com/oititec/liveness3d-bridge-rn/tree/master/android/app/src/main/java/com/liveness3drnbridge/Liveness3dReactNativePackage.kt) e o [Liveness3dReactNativeModule.kt](https://github.com/oititec/liveness3d-bridge-rn/tree/master/android/app/src/main/java/com/liveness3drnbridge/Liveness3dReactNativeModule.kt) na pasta <mark>android/app/src/main/java/com/your-app-name/</mark>
 
 **Liveness3dReactNativePackage.kt**
 

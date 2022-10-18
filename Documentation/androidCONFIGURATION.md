@@ -4,9 +4,9 @@ Para iniciar a configuração nativa no android você deve seguir os passos abai
 
 ## 1.1 Artefatos .aar
 
-[Baixar aqui](https://github.com/oititec/liveness3d-rn-bridge/tree/master/android/app/libs) os dois artefatos atualizados do android, sendo eles;
+[Baixar aqui](https://github.com/oititec/liveness3d-bridge-rn/tree/master/android/app/libs) os dois artefatos atualizados do android, sendo eles;
 
-- [facetec-sdk-9.4.16.aar](https://github.com/oititec/liveness3d-rn-bridge/blob/master/android/app/libs/facetec-sdk-9.4.16.aar)
+- [facetec-sdk-9.4.16.aar](https://github.com/oititec/liveness3d-bridge-rn/blob/master/android/app/libs/facetec-sdk-9.4.16.aar)
 - [liveness-3d-release.aar](https://github.com/oititec/liveness-android-sdk/blob/main/br/com/oititec/liveness-sdk/5.4.0/liveness3d-release.aar)
 
 Após efetuar o download dos arquivos criar uma parta chamada **/libs** dentro da sua pasta **android/app** gerada pelo React Native, e colocar os .aar baixados.

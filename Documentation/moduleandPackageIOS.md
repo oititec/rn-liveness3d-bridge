@@ -1,4 +1,4 @@
-# 1 Criar Módulo e Pacote
+# 1 Criar Módulo e Pacote no iOS
 
 Primeiro você deve criar um arquivo no xcode chamado Liveness3dReactNative.m com a extensão Objective-C file e adicionar o seguinte código:
 
