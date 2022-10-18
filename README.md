@@ -16,15 +16,19 @@ As instruções de uso, integração, implementação e customização do **Live
 
 Andorid
 
-- [Configuração no Android](Documentation/androidCONFIGURATION.md);
-- [Criar Módulo e Pacote (JAVA)](Documentation/moduleandPackageJAVA.md);
-- [Criar Módulo e Pacote (KOTLIN)](Documentation/moduleandPackageKOTLIN.md);
-- [Como fazer a estilização do XML?](Documentation/xmlCUSTOMIZATION.md.md);
+- [Configuração no Android;](Documentation/androidCONFIGURATION.md);
+- [Criar Módulo e Pacote (JAVA);](Documentation/moduleandPackageJAVA.md);
+- [Criar Módulo e Pacote (KOTLIN);](Documentation/moduleandPackageKOTLIN.md);
+- [Como fazer a estilização do XML?;](Documentation/xmlCUSTOMIZATION.md.md);
+- [Guia de customização do Liveness3DTheme;](Documentation/liveness3DThemeAndroidCUSTOMIZATION.md);
+- [Guia de implementação de view customizada;](Documentation/customViewANDROID.md);
 
 iOS:
 
 - [Configuração no iOS](Documentation/iosCONFIGURATION.md);
 - [Criar Módulo e Pacote no iOS](Documentation/moduleandPackageIOS.md);
+- [Guia de customização do Liveness3DTheme](Documentation/liveness3DThemeiOSCUSTOMIZATION.md);
+- [Guia de implementação de view customizada;](Documentation/customViewIOS.md);
 
 React Native:
 
