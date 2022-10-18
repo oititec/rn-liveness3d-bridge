@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.otf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.otf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Ubuntu-Medium.otf">
+            <string>Ubuntu-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PermissionCustomView" customModule="SampleFaceCaptcha" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="z7c-gr-ndT" id="G7G-Rz-2Wh"/>
+                <outlet property="continueButton" destination="EfE-Tx-rfx" id="099-iW-1Tm"/>
+                <outlet property="view" destination="dR0-Sa-X8I" id="KW7-oG-lju"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dR0-Sa-X8I">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hes-6l-dVo">
+                    <rect key="frame" x="24" y="140.00000000000003" width="342" height="296.66666666666674"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_camera_permission" translatesAutoresizingMaskIntoConstraints="NO" id="9BE-8Y-iLG">
+                            <rect key="frame" x="0.0" y="0.0" width="342" height="56"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permissões da câmera desativadas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6B-XH-VTQ">
+                            <rect key="frame" x="0.0" y="80" width="342" height="72"/>
+                            <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="32"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifique as configurações do seu sistema operacional." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sba-IA-D81">
+                            <rect key="frame" x="0.0" y="176" width="342" height="48.666666666666657"/>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfE-Tx-rfx">
+                            <rect key="frame" x="0.0" y="248.66666666666669" width="342" height="48"/>
+                            <color key="backgroundColor" red="0.019607843140000001" green="0.84313725490000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="hOX-uz-CKX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                            <color key="tintColor" red="0.019607843140000001" green="0.84313725490000002" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Verificar">
+                                <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-gr-ndT">
+                    <rect key="frame" x="14" y="53" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="AYQ-WM-7FY"/>
+                        <constraint firstAttribute="height" constant="40" id="oTu-d8-aqe"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic_nav_back_button_liveness3D" title=" "/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="lVJ-42-1EQ"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="z7c-gr-ndT" firstAttribute="top" secondItem="dR0-Sa-X8I" secondAttribute="top" constant="53" id="4TT-zL-Fka"/>
+                <constraint firstItem="lVJ-42-1EQ" firstAttribute="trailing" secondItem="hes-6l-dVo" secondAttribute="trailing" constant="24" id="5H9-TB-IH4"/>
+                <constraint firstItem="hes-6l-dVo" firstAttribute="top" secondItem="z7c-gr-ndT" secondAttribute="bottom" constant="47" id="L5A-bx-mgt"/>
+                <constraint firstItem="z7c-gr-ndT" firstAttribute="leading" secondItem="lVJ-42-1EQ" secondAttribute="leading" constant="14" id="mf5-59-Bh2"/>
+                <constraint firstItem="hes-6l-dVo" firstAttribute="leading" secondItem="lVJ-42-1EQ" secondAttribute="leading" constant="24" id="xSN-js-aug"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="59"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_camera_permission" width="56" height="56"/>
+        <image name="ic_nav_back_button_liveness3D" width="9" height="16"/>
+    </resources>
+</document>
