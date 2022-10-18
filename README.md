@@ -6,7 +6,7 @@ Este repositório é responsável pela conexão do NativeModules do React Nactiv
 
 A Bridge no React Native é a camada que permite que os módulos JavaScript e Nativo interajam entre si e é principalmente uma camada transportadora que conduz mensagens de feedback agrupadas cronológicas não paralelas de JavaScript para módulos Nativos.
 
-![alt text](https://github.com/oititec/liveness3d-bridge-rn/blob/master/Documentation/bridge.png?raw=true)
+![alt text](https://github.com/oititec/liveness3d-bridge-rn/blob/master/Documentation/assets/bridge.png?raw=true)
 
 # 3. Uso
 
