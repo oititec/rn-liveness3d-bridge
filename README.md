@@ -63,6 +63,8 @@ npm i
 
 ## 4.2 Executar Projeto
 
+> Executar sempre em dispositivos físicos e não no simulador do iOS e Android
+
 Yarn
 
 ```sh
