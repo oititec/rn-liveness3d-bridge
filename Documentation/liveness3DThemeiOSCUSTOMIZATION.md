@@ -1,4 +1,36 @@
-# 1. Guia de Customização do Liveness3DTheme
+# 1. Exemplo de Customização do Liveness3DTheme iOS
+
+Para iniciar a customização do Liveness3D você deve adicionar a classe Liveness3dTheme que existe dentro do POD FaceCaptcha da seguinte forma;
+
+```swift
+var theme = Liveness3DTheme(Liveness3DThemeType.light)
+            theme.ovarCustomizationStrokeColor = UIColor(red: 0.9137, green: 0.3216, blue: 0.149, alpha: 1.0)
+            theme.ovarCustomizationProgressColor1 = UIColor(red: 0.9137, green: 0.3216, blue: 0.149, alpha: 1.0)
+            theme.ovarCustomizationProgressColor2 = UIColor(red: 0.9137, green: 0.3216, blue: 0.149, alpha: 1.0)
+            theme.guidanceCustomizationButtonBackgroundNormalColor = UIColor(red: 0.9137, green: 0.3216, blue: 0.149, alpha: 1.0)
+            theme.guidanceCustomizationButtonBackgroundHighlightColor = UIColor(red: 0.9137, green: 0.3216, blue: 0.149, alpha: 1.0)
+            theme.guidanceCustomizationButtonBackgroundDisabledColor = UIColor(red: 0.9137, green: 0.3216, blue: 0.149, alpha: 0.5)
+```
+
+Após isso você deve inserir os parametros na ViewControler do Liveness3D;
+
+```swift
+let vc = Liveness3DViewController(
+                    endpoint: "",
+                    liveness3DUser: Liveness3DUser(
+                                          appKey: APP_KEY,
+                                          environment: .HML,
+                                          defaultTheme: theme, //tema default
+                                          lowLightTheme: theme, //tema com baixas luzes
+                                          texts: Liveness3DStrings.values
+                                      ),
+                    debugOn: true,
+                    customInstructionView: instructionView, //aqui é chamado a view de instruções
+                    customPermissionView: permissionView    // aqui é chamado a view de permissões
+                  )
+```
+
+# 2. Guia de Customização do Liveness3DTheme iOS
 
 A customização do fluxo de prova de vida, dar-se por meio da utilização da `Liveness3DTheme`. Essa classe na sua construção recebe o template padrão, podendo ser DarkTheme ou LightTheme.<br>
 Abaixo, estão mapeadas as propriedades para customização do `Liveness3DTheme`.

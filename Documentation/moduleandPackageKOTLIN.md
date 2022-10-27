@@ -5,7 +5,7 @@ Após executar essas etapas você deve iniciar a criação do módulo e do pacot
 **Liveness3dReactNativePackage.kt**
 
 ```kt
-package com.liveness3drnbridge;
+package br.com.liveness3drnbridge;
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -27,7 +27,7 @@ class Liveness3dReactNativePackage : ReactPackage {
 **Liveness3dReactNativeModule.kt**
 
 ```kt
-package com.liveness3drnbridge;
+package br.com.liveness3drnbridge;
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule

@@ -1,4 +1,4 @@
-package com.liveness3drnbridge.newarchitecture.modules;
+package br.com.liveness3drnbridge.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

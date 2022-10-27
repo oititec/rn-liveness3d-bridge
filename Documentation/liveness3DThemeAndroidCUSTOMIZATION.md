@@ -1,4 +1,29 @@
-# 1. Guia de Customização do Liveness3DTheme
+# 1. Exemplo de Customização do Liveness3DTheme Android
+
+Para iniciar a customização do Liveness3D você deve importar a classe Liveness3DTheme no arquivo do modulo Liveness3dReactNativeModule
+
+```kt
+import br.com.oiti.liveness3d.data.model.Liveness3DTheme
+```
+
+Após importar a classe Liveness3DTheme você pode adicionar o tema da seguinte forma;
+
+```kt
+val liveness3DUser = new Liveness3DUser(appKey, ENVIRONMENT3D.HML, new Liveness3DTheme.Builder()
+        .ovalCustomizationStrokeColor(R.color.brand_color_primary)
+        .ovalCustomizationProgressColor1(R.color.brand_color_primary)
+        .ovalCustomizationProgressColor2(R.color.white)
+        .guidanceCustomizationButtonBackgroundNormalColor(R.color.brand_color_primary)
+        .resultScreenCustomizationUploadProgressFillColor(R.color.brand_color_primary)
+        .resultScreenCustomizationActivityIndicatorColor(R.color.brand_color_primary)
+        .guidanceCustomizationButtonTextNormalColor(R.color.white)
+        .resultScreenCustomizationCustomActivityIndicatorAnimation(R.drawable.animated_activity_indicator)
+        .resultScreenCustomizationCustomResultAnimationSuccess(R.drawable.animated_success)
+        .resultScreenCustomizationCustomResultAnimationUnSuccess(R.drawable.animated_unsuccess)
+        .build());
+```
+
+# 2. Guia de Customização do Liveness3DTheme Android
 
 > Versão Beta.
 

@@ -1,4 +1,4 @@
-package com.liveness3drnbridge.newarchitecture;
+package br.com.liveness3drnbridge.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.liveness3drnbridge.BuildConfig;
-import com.liveness3drnbridge.newarchitecture.components.MainComponentsRegistry;
-import com.liveness3drnbridge.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import br.com.liveness3drnbridge.BuildConfig;
+import br.com.liveness3drnbridge.newarchitecture.components.MainComponentsRegistry;
+import br.com.liveness3drnbridge.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

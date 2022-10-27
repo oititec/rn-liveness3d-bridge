@@ -1,4 +1,4 @@
-package com.liveness3drnbridge.newarchitecture.components;
+package br.com.liveness3drnbridge.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

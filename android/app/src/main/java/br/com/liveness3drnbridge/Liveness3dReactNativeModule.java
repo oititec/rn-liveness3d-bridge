@@ -1,44 +1,3 @@
-# 1. Criar Módulo e Pacote JAVA
-
-Após executar essas etapas você deve iniciar a criação do módulo e do pacote incluindo os arquivos [Liveness3dReactNativePackage.kt](https://github.com/oititec/liveness3d-bridge-rn/tree/master/android/app/src/main/java/com/liveness3drnbridge/Liveness3dReactNativePackage.java) e o [Liveness3dReactNativeModule.kt](https://github.com/oititec/liveness3d-bridge-rn/tree/master/android/app/src/main/java/com/liveness3drnbridge/Liveness3dReactNativeModule.java) na pasta <mark>android/app/src/main/java/com/your-app-name/</mark>
-
-**Liveness3dReactNativePackage.java**
-
-```java
-package br.com.liveness3drnbridge;
-
-import androidx.annotation.NonNull;
-
-import com.facebook.react.ReactPackage;
-import com.facebook.react.bridge.NativeModule;
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.uimanager.ViewManager;
-
-import java.util.*;
-
-
-public class Liveness3dReactNativePackage implements ReactPackage {
-
-  @Override
-  public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
-    List<NativeModule> modules = new ArrayList<>();
-    modules.add(new Liveness3dReactNativeModule(reactContext));
-    return modules;
-  }
-
-  @NonNull
-  @Override
-  public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
-    return Collections.emptyList();
-  }
-
-}
-
-```
-
-**Liveness3dReactNativeModule.java**
-
-```java
 package br.com.liveness3drnbridge;
 
 
@@ -123,5 +82,3 @@ public class Liveness3dReactNativeModule extends ReactContextBaseJavaModule impl
 
   }
 }
-
-```

@@ -1,4 +1,4 @@
-package com.liveness3drnbridge;
+package br.com.liveness3drnbridge;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
