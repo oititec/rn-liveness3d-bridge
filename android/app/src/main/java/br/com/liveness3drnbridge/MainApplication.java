@@ -1,5 +1,6 @@
 package br.com.liveness3drnbridge;
 
+
 import android.app.Application;
 import android.content.Context;
 
@@ -13,6 +14,9 @@ import com.facebook.soloader.SoLoader;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+
+import br.com.liveness3drnbridge.Liveness3dReactNativePackage;
+
 
 import br.com.liveness3drnbridge.newarchitecture.MainApplicationReactNativeHost;
 
@@ -30,7 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
+          packages.add(new Liveness3dReactNativePackage());
           return packages;
         }
 
