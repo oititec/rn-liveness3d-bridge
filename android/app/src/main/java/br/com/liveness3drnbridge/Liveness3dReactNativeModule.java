@@ -54,8 +54,7 @@ public class Liveness3dReactNativeModule extends ReactContextBaseJavaModule impl
       Liveness3DUser liveness3DUser = new Liveness3DUser(appKey, ENVIRONMENT3D.HML, null);
       Intent intent = new Intent(getCurrentActivity(), Liveness3DActivity.class);
       intent.putExtra(Liveness3DActivity.PARAM_LIVENESS3D_USER, liveness3DUser);
-      
-
+    
       getCurrentActivity().startActivityForResult(intent, LIVENESS3D_REQUEST);
     } catch (Exception e) {
       mLiveness3dPromisse.reject(E_FAILED_TO_SHOW_PICKER, e);
