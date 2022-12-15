@@ -1,43 +1,46 @@
-## Documentoscopia digital
-Autenticação do Documento de Identificação
+## Liveness (Prova de vida do usuário)
+É um conjunto de recursos técnicos para combater ataques de falsificação biométrica e determinar se a fonte da imagem está viva e presente no momento da captura ou se é uma reprodução. Por exemplo: foto de foto, foto de vídeo, deepfake etc.
 
-Esta funcionalidade identifica padrões e realiza conferências automatizadas, de documentos de identificação, que são normalmente realizadas em processos manuais de documentoscopia.
+Neste repositório você vai encontrar uma descrição das soluções **Liveness Ativo (Liveness 2D)** e **Liveness 3D**. Além de ficar por dentro dos retornos (Responses) de cada Liveness mencionados aqui.
 
-A Documentoscopia Digital faz uso de tecnologias avançadas, como a **inteligência artificial e a visão computacional** para analisar elementos do documento de identificação.
+### O que é Liveness Ativo (Liveness 2D)?
+Esta solução permite a validação do usuário através de tecnologias para o reconhecimento e leitura de **movimentos da face**.
 
-**Exemplos**: o atalho doce; alinhamento entre campos; formatação; chancela; e brasão.
+### Liveness Captcha
+É um **SDK** que reúne um conjunto de propriedades de segurança, para agilizar a autenticação de pessoas através de desafios (movimento da face) em tempo real. Esses desafios servem para validar a qualidade das fotos garantindo a prova de vida do usuário no momento da operação.
 
-Eles servem para verificar a autenticidade dos documentos de identificação e, com isso, evitar o uso de documentos falsos ou ainda de terceiros para efetuar cadastros.
+### Como funciona?
+É solicitado ao usuário uma interação em **tempo real** para executar os desafios. 
+Após as capturas da face, são realizadas as análises e os tratamentos de cada uma para garantir que todos os desafios sejam cumpridos com sucesso.
 
-Aliada à tecnologia de biometria facial e algoritmos com mais de 3 mil regras de documentoscopia para CNH e RG, a solução visa garantir mais segurança, confiabilidade e praticidade para as empresas. 
-Essas regras variam de acordo com os **tipos de documentações oficiais, modelo, período de expedição e regras de peritos de documentoscopia**.
+Parâmetros para os **tipos de desafios** e **níveis de confiança**:
+- **Tipos de desafios (movimentos da face)**: 
+  Fique sério; Sorria; Vire para a direita; Vire para a esquerda; Olhe para a câmera (frontal); Incline a cabeça para a direita; Incline a cabeça para a esquerda; Olhe para cima; Olhe para baixo.
 
-São exemplos de algumas das 3 mil regras de documentoscopia:
-- Qualidade da imagem
-- Foto no documento
-- Alinhamento entre campos
-- Formatação
-- Chancela
-- Texto e outros
+- Os **níveis de confiança** disponíveis refletem o nível de exigência medido para a execução dos desafios. 
+Exemplo: variação de grau da inclinação da face que pode ser de nível baixo, médio ou alto.
 
+### Resultado
+As soluções de Liveness mencionadas acima fornecem alguns retornos para o usuário. Entenda quais são eles:
 
-## Resultado
-Os resultados da Documentoscopia Digital são retornados por meio dos seguintes processos:
-1. Tratamento das imagens dos documentos;
-2. Extração das informações dos documentos;
-3. Indexação automática dos dados do usuário;
-4. Verificação e autenticidade do documento;
-5. Validação das capturas enviadas;
-6. Diagnóstico da documentoscopia.
-
-### Resultado positivo
-Acontece quando não há falha em nenhuma regra do nosso sistema. 
-Isso significa que o documento tem baixo índice de fraude e não será necessário fazer uma análise manual.
+## Resultado positivo
+Acontece quando os desafios são concluídos com sucesso. Isso significa que existe um baixo risco de fraude.
 
 ### Resultado negativo
-É uma Identificação de regra de risco que pode ser interpretada sistemicamente como alerta para revisão manual. Pela interface web, o analista avalia as seguintes condições:
-- Indica um erro operacional e o analista realiza a aprovação manual;
-- Indica uma suspeita de fraude e o analista mantém decisão de risco.
- 
-### Ilegível
-Ocorre quando o sistema não consegue capturar **Estado** ou **Expedição**, na maioria das vezes por baixa qualidade de imagem ou devido ao envio do documento incompleto (enviar a face A (frente) e não enviar a face B (verso), ou vice e versa).
+Ocorre quando há uma falha na autenticação facial. Esses resultados podem indicar fraude.
+- falha na validação da autenticidade facial;
+- erro na execução de interações do usuário;
+- alcance do limite de tentativas de execução do liveness pelo usuário.
+
+Os retornos são representados pelos seguintes códigos:
+
+| codID| Descrição |
+| - | - |
+| 1.1    | Cadastro com sucesso  |
+| 1.2 | Certificação positiva (Conhecido = True)|
+| 200.1 | Cadastro com alertas |
+| 200.2 | Certificação negativa (Conhecido = True) |
+| 200.3 | Certificação positiva (Conhecido = False) |
+| 200.4 | Certificação negativa (Conhecido = False) |
+| 300.1 | Prova de vida inválida |
+| 300.2 | Usuário bloqueado |
