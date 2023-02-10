@@ -24,7 +24,7 @@ As instruções de uso, integração, implementação e customização do **Live
 - [Configuração no Android;](Documentation/androidCONFIGURATION.md);
 - [Criar Módulo e Pacote (JAVA);](Documentation/moduleandPackageJAVA.md);
 - [Criar Módulo e Pacote (KOTLIN);](Documentation/moduleandPackageKOTLIN.md);
-- [Como fazer a estilização do XML?;](Documentation/xmlCUSTOMIZATION.md.md);
+- [Como fazer a estilização do XML?;](Documentation/xmlCUSTOMIZATION.md);
 - [Guia de customização do Liveness3DTheme;](Documentation/liveness3DThemeAndroidCUSTOMIZATION.md);
 - [Guia de implementação de view customizada;](Documentation/customViewANDROID.md);
 
