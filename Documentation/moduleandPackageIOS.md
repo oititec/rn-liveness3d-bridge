@@ -28,21 +28,46 @@ import Foundation
 import FaceCaptcha
 
 @objc(Liveness3dReactNative)
-class Liveness3dReactNative: NSObject {
+class Liveness3dReactNative: NSObject, Liveness3DDelegate {
+
+  var resolve:RCTPromiseResolveBlock!
+
+  func handleLiveness3DValidation(validateModel: Liveness3DSuccess) {
+    resolve("RESULT_OK")
+  }
+
+  func handleLiveness3DError(error: Liveness3DError) {
+    resolve("RESULT_CANCELLED")
+  }
+
 
   @objc(startliveness3d:withResolver:withRejecter:)
-  func startliveness3D(appKey: String, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
+  func startliveness3D(appKey: String, resolve:@escaping RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
+
+      self.resolve = resolve
 
       let APP_KEY = appKey
-      let vc = Liveness3DViewController(endpoint: "", liveness3DUser: Liveness3DUser(appKey: APP_KEY, environment: .HML), debugOn: true)
 
       DispatchQueue.main.async {
-          RCTPresentedViewController()?.present(vc, animated: true)
+
+        let vc = Liveness3DViewController(
+                    endpoint: "",
+                    liveness3DUser: Liveness3DUser(
+                                          appKey: APP_KEY,
+                                          environment: .HML
+                                      ),
+                    debugOn: true
+                  )
+        vc.delegate = self
+        RCTPresentedViewController()?.present(vc, animated: true)
       }
-      resolve("RESULT_OK")
+
 
   }
+
+
 }
+
 ```
 
 Após essa etapa altere o arquivo com o tipo de Header File Header.h adicionando o seguinte código:
