@@ -3,17 +3,16 @@
 Este repositório é responsável pela conexão do **NativeModules do React Nactive**, com ele é possível instalar e usar os artefatos do Liveness3D da Oititec disponíveis em aplicativos híbridos.
 
 ### Saiba mais sobre Liveness2D, Liveness3D e Documentoscopia:
-  - [Descrição e Resultados Liveness 2D](Documentation/Liveness2D-Description.md)
-  - [Descrição e Resultados Liveness 3D](Documentation/Liveness3D-Description.md)
-  - [Descrição e Resultados Documentoscopia](Documentation/Documentoscopy-Description.md)
 
+- [Descrição e Resultados Liveness 2D](Documentation/Liveness2D-Description.md)
+- [Descrição e Resultados Liveness 3D](Documentation/Liveness3D-Description.md)
+- [Descrição e Resultados Documentoscopia](Documentation/Documentoscopy-Description.md)
 
 ### O que é Bridge?
 
 A Bridge no React Native é a camada que permite que os módulos JavaScript e Nativo interajam entre si e é principalmente uma camada transportadora que conduz mensagens de feedback agrupadas cronológicas não paralelas de JavaScript para módulos Nativos.
 
 ![alt text](https://github.com/oititec/liveness3d-bridge-rn/blob/master/Documentation/assets/bridge.png?raw=true)
-
 
 ### Liveness 3D Bridge Sumário
 
@@ -24,6 +23,8 @@ As instruções de uso, integração, implementação e customização do **Live
 - [Configuração no Android;](Documentation/androidCONFIGURATION.md);
 - [Criar Módulo e Pacote (JAVA);](Documentation/moduleandPackageJAVA.md);
 - [Criar Módulo e Pacote (KOTLIN);](Documentation/moduleandPackageKOTLIN.md);
+- [Como fazer a estilização dos Textos?(KOTLIN);](Documentation/liveness3DTextCUSTOMIZATIONKOTLIN.md);
+- [Como fazer a estilização dos Textos?(JAVA);](Documentation/liveness3DTextCUSTOMIZATION.md);
 - [Como fazer a estilização do XML?;](Documentation/xmlCUSTOMIZATION.md);
 - [Guia de customização do Liveness3DTheme;](Documentation/liveness3DThemeAndroidCUSTOMIZATION.md);
 - [Guia de implementação de view customizada;](Documentation/customViewANDROID.md);

@@ -288,7 +288,8 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.0"
 
-    implementation 'br.com.oiti:liveness3d-sdk:6.0'
+    implementation 'br.com.oiti:liveness3d-sdk:6.5'
+    //implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 

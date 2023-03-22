@@ -13,6 +13,7 @@ import br.com.oiti.liveness3d.app.ui.Liveness3DActivity
 //import br.com.oiti.liveness3d.theme.Liveness3DTheme
 import br.com.oiti.liveness3d.data.model.ENVIRONMENT3D
 import br.com.oiti.liveness3d.data.model.Liveness3DUser
+import br.com.oiti.liveness3d.data.model.Liveness3DTextKey
 import com.facebook.react.bridge.*
 
 

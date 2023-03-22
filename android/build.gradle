@@ -40,7 +40,6 @@ allprojects {
             url("$rootDir/../node_modules/jsc-android/dist")
         }
         maven { url "https://raw.githubusercontent.com/oititec/android-oiti-versions/master" }
-    //  maven { url "https://raw.githubusercontent.com/oititec/android-network-module/master" }
         mavenCentral {
             // We don't want to fetch react-native from Maven Central as there are
             // older versions over there.
