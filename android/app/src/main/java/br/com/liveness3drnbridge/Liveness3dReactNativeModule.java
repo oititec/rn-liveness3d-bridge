@@ -3,24 +3,24 @@ package br.com.liveness3drnbridge;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import br.com.oiti.liveness3d.R;
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+
 import br.com.oiti.liveness3d.app.ui.Liveness3DActivity;
 import br.com.oiti.liveness3d.data.model.ENVIRONMENT3D;
+import br.com.oiti.liveness3d.data.model.Liveness3DTextKey;
 import br.com.oiti.liveness3d.data.model.Liveness3DUser;
-
-//import br.com.oiti.liveness3d.theme.Liveness3DTheme;
-
-import br.com.oiti.liveness3d.data.domain.model.appkey.AppKeyRequest;
-import br.com.oiti.liveness3d.data.domain.model.appkey.CredentialRequest;
 
 
 public class Liveness3dReactNativeModule extends ReactContextBaseJavaModule implements ActivityEventListener {
@@ -50,10 +50,19 @@ public class Liveness3dReactNativeModule extends ReactContextBaseJavaModule impl
 
     mLiveness3dPromisse = promise;
 
+
+    Map<Liveness3DTextKey, String> texts = new HashMap<Liveness3DTextKey, String>() {{
+      put(Liveness3DTextKey.READY_HEADER_1,"TESTE");
+      put(Liveness3DTextKey.READY_HEADER_2,"DE REC FACIAL");
+    }};
+
+    Log.d("TEXTOS STRINGS", String.valueOf(texts));
+
     try {
       Liveness3DUser liveness3DUser = new Liveness3DUser(appKey, ENVIRONMENT3D.HML, null);
       Intent intent = new Intent(getCurrentActivity(), Liveness3DActivity.class);
       intent.putExtra(Liveness3DActivity.PARAM_LIVENESS3D_USER, liveness3DUser);
+      intent.putExtra(Liveness3DActivity.PARAM_TEXTS, (Serializable) texts);
     
       getCurrentActivity().startActivityForResult(intent, LIVENESS3D_REQUEST);
     } catch (Exception e) {
