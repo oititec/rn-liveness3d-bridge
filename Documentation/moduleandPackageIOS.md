@@ -23,49 +23,40 @@ Crie o arquivo Swift chamado Liveness3dReactNative.swift adicionando o código a
 
 ```swift
 import UIKit
-import Foundation
-
 import FaceCaptcha
 
 @objc(Liveness3dReactNative)
 class Liveness3dReactNative: NSObject, Liveness3DDelegate {
-
-  var resolve:RCTPromiseResolveBlock!
-
-  func handleLiveness3DValidation(validateModel: Liveness3DSuccess) {
-    resolve("RESULT_OK")
-  }
-
-  func handleLiveness3DError(error: Liveness3DError) {
-    resolve("RESULT_CANCELLED")
-  }
-
-
-  @objc(startliveness3d:withResolver:withRejecter:)
-  func startliveness3D(appKey: String, resolve:@escaping RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
-
-      self.resolve = resolve
-
-      let APP_KEY = appKey
-
-      DispatchQueue.main.async {
-
-        let vc = Liveness3DViewController(
-                    endpoint: "",
-                    liveness3DUser: Liveness3DUser(
-                                          appKey: APP_KEY,
-                                          environment: .HML
-                                      ),
-                    debugOn: true
-                  )
-        vc.delegate = self
-        RCTPresentedViewController()?.present(vc, animated: true)
-      }
-
-
-  }
-
-
+    
+    var resolve: RCTPromiseResolveBlock!
+    
+    func handleLiveness3DValidation(validateModel: Liveness3DSuccess) {
+        resolve("RESULT_OK")
+    }
+    
+    func handleLiveness3DError(error: Liveness3DError) {
+        resolve("RESULT_CANCELLED")
+    }
+    
+    @objc(startliveness3d:withResolver:withRejecter:)
+    func startliveness3D(appKey: String, resolve: @escaping RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) -> Void {
+        
+        self.resolve = resolve
+        
+        let APP_KEY = appKey
+        
+        DispatchQueue.main.async {
+            let vc = Liveness3DViewController(
+                liveness3DUser: Liveness3DUser(
+                    appKey: APP_KEY,
+                    environment: .HML
+                ),
+                delegate: self
+            )
+            
+            RCTPresentedViewController()?.present(vc, animated: true)
+        }
+    }
 }
 
 ```
